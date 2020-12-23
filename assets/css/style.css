@@ -123,6 +123,10 @@ h1, h2, h3, h4, h5, h6 {
 #header.header-scrolled, #header.header-inner-pages {
   background: rgb(115,106,98);
 }
+.header-scrolled-opacity {
+  background: rgb(115,106,98);
+  opacity: 0.4;
+} 
 
 #header .logo {
   font-size: 32px;
@@ -268,8 +272,6 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
   display: inline-block;
   border: 2px solid #ff0000;
-}
-
 }
 
 @media (max-width: 768px) {
@@ -936,6 +938,15 @@ section {
   }
   .counts .image img {
     max-width: 80%;
+  }
+  .bounce {
+    display: none;
+    /* height: -1px;
+    position: unset;
+    animation: bounce 0.4s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    margin-bottom: -31px; */
   }
 }
 
@@ -1791,4 +1802,107 @@ section {
   -ms-transform: scale(1);
   transform: scale(1);
 }
+
+/* checking i */
+{
+  box-sizing: border-box;
+}
+
+html {
+  background-color: black;
+  font-family     : "Times New Roman", Times, serif;
+}
+
+.wrapper {
+  display        : flex;
+  justify-content: space-around;
+  align-items    : baseline;
+  padding        : 3em 1em 3em 1em;
+}
+
+.box {
+  display: inline-block;
+}
+
+.letter {
+  text-align : center;
+  font-size  : 1em;
+  margin     : 0;
+  font-weight: bold;
+  color      : white;
+  /* line-height: 0.55; */
+  font-family: "Times New Roman", Times, serif;
+}
+
+@keyframes bounce {
+  from {
+      transform: translate3d(0, 0, 0);
+  }
+
+  to {
+      transform: translate3d(0, -10px, 0);
+  }
+}
+
+.bounce {
+  animation                : bounce 0.4s;
+  animation-iteration-count: infinite;
+  animation-direction      : alternate;
+  margin-bottom: -29px;
+}
+
+@keyframes color-change {
+  from {
+      color: #ff8a00;
+  }
+
+  to {
+      color: #0075ff;
+  }
+}
+
+.color-change {
+  color    : #ff8a00;
+  animation: color-change 2s infinite alternate;
+}
+
+@keyframes appear {
+  0% {
+      font-size: 0;
+      opacity  : 0;
+  }
+
+  50% {
+      font-size: 4em;
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+.appear {
+  animation: appear 3s alternate infinite;
+}
+
+@keyframes rotate {
+  from {
+      opacity  : 0;
+      transform: rotate(90deg)
+  }
+
+  to {
+      transform: rotate(0deg)
+  }
+
+  100% {
+      opacity: 1;
+  }
+}
+
+.rotate {
+  animation: rotate 3s infinite;
+}
+
+
 

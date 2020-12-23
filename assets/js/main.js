@@ -1,8 +1,8 @@
 /**
 * Template Name: Gp - v2.1.0
 * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
+* Author: Pranav
+* License: Insphere Ideas
 */
 !(function($) {
   "use strict";
@@ -100,7 +100,7 @@
   // Navigation active state on scroll
   var nav_sections = $('section');
   var main_nav = $('.nav-menu, #mobile-nav');
-
+  var navb = '';
   $(window).on('scroll', function() {
     var cur_pos = $(this).scrollTop() + 200;
 
@@ -116,6 +116,13 @@
       }
       if (cur_pos < 300) {
         $(".nav-menu ul:first li:first").addClass('active');
+        // $(".nav-menu ul:first li:first").style.visibility = 'hidden';;
+        // document.querySelectorAll('.nav-menu').style.visibility='hidden';
+        
+      }
+      if (cur_pos > 300) {
+        $(main_nav).hide();
+        console.log(main_nav)
       }
     });
   });
@@ -128,9 +135,19 @@
       $('#header').removeClass('header-scrolled');
     }
   });
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > 300) {
+      $('#header').addClass('header-scrolled-opacity');
+    } else {
+      $('#header').removeClass('header-scrolled-opacity');
+    }
+  });
 
   if ($(window).scrollTop() > 100) {
     $('#header').addClass('header-scrolled');
+  }
+  if ($(window).scrollTop() > 300) {
+    $('#header').addClass('header-scrolled-opacity');
   }
 
   // Back to top button
