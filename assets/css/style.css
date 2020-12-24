@@ -572,13 +572,13 @@ section {
   padding-top: 20px;
 }
 
-.clients .owl-item {
+/* .clients .owl-item {
   display: flex;
   height: 300px;
   justify-content: center;
   align-items: stretch;
   padding: 0 20px;
-}
+} */
 
 .clients .owl-item img {
   width:  100%;
@@ -592,7 +592,9 @@ section {
   -webkit-filter: none;
   filter: none;
   opacity: 1;
+
 }
+
 
 .clients .owl-nav, .clients .owl-dots {
   margin-top: 5px;
@@ -709,8 +711,8 @@ section {
 # Cta
 --------------------------------------------------------------*/
 .cta {
-  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/cta-bg.jpg") fixed center center;
-  background-size: cover;
+  background: linear-gradient(rgba(2, 2, 2, 0.5), rgba(0, 0, 0, 0.5)), url("../img/erp/erp4.jpg") fixed center center;
+  background-size: 2000px, 871px;
   padding: 60px 0;
 }
 
@@ -927,7 +929,8 @@ section {
 }
 
 .counts .image {
-  background: url("../img/counts-img.jpg") center center no-repeat;
+  /* background: url("../img/counts-img.jpg") center center no-repeat; */
+  background: url("../img/portfolio2/happy_client2.jpg") center center no-repeat;
   background-size: cover;
   min-height: 400px;
 }
@@ -1906,3 +1909,15 @@ html {
 
 
 
+/* Bootstrap carousel overriding height * width */
+.w-100 {
+  margin: auto;
+  width: 50%!important;
+  height: 50%!important;
+}
+
+
+/* .row .image {
+  width: 50%!important;
+  height: 50%!important;
+} */
